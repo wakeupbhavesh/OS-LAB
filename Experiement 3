@@ -1,0 +1,6 @@
+pgrep firefox
+-e
+-l
+ls - l
+kill
+top
