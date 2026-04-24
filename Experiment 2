@@ -1,0 +1,34 @@
+gcc --version
+touch gccexp.c
+nano gccexp.c
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int compile_status;
+    int run_status;
+    compile_status = system("gcc program.c -o program");
+    if (compile_status == 0)
+    {
+        printf("Compilation Successful!\n");
+        run_status = system("./program");
+        if (run_status == 0)
+        {
+            printf("\nProgram executed successfully.\n");
+        }
+        else
+        {
+            printf("\nError while running the program.\n");
+        }
+    }
+    else
+    {
+        printf("Compilation Failed!\n");
+    }
+    return 0;
+}
+
+gcc exp.c -o gccexp
+./gccexp
